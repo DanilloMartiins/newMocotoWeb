@@ -1,0 +1,74 @@
+.reserva-grade {
+  display: flex;
+  gap: 24px;
+}
+
+.form {
+  flex: 1;
+  background: #fff;
+  padding: 28px;
+  border-radius: 8px;
+}
+
+.form label {
+  display: block;
+  margin: 12px 0 6px;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.form input,
+.form select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 15px;
+}
+
+.form button {
+  width: 100%;
+  margin-top: 20px;
+  background: var(--barro);
+  color: #fff;
+  border: none;
+  padding: 12px;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.aviso {
+  margin-top: 16px;
+  background: var(--areia);
+  padding: 12px;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.reserva-info {
+  width: 300px;
+  background: var(--marrom);
+  color: var(--areia);
+  padding: 28px;
+  border-radius: 8px;
+}
+
+.reserva-info h3 {
+  color: var(--sol);
+  margin-bottom: 8px;
+}
+
+.reserva-info p {
+  margin-bottom: 16px;
+}
+
+@media (max-width: 768px) {
+  .reserva-grade {
+    flex-direction: column;
+  }
+
+  .reserva-info {
+    width: 100%;
+  }
+}

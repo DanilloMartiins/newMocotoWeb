@@ -1,0 +1,78 @@
+.topo {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: var(--sol);
+  box-shadow: 0 2px 8px rgba(51, 33, 26, 0.15);
+  z-index: 100;
+}
+
+.topo-dentro {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 12px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo img {
+  height: 48px;
+}
+
+.links {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+}
+
+.links a {
+  color: var(--marrom);
+  font-size: 15px;
+}
+
+.links a:hover {
+  color: var(--barro);
+}
+
+.btn-reserva {
+  background: var(--barro);
+  color: #fff !important;
+  padding: 8px 20px;
+  border-radius: 4px;
+  font-weight: 600;
+}
+
+.btn-reserva:hover {
+  background: var(--barro-escuro);
+}
+
+.menu-btn {
+  display: none;
+  background: none;
+  border: none;
+  color: var(--marrom);
+  font-size: 26px;
+}
+
+@media (max-width: 768px) {
+  .menu-btn {
+    display: block;
+  }
+
+  .links {
+    display: none;
+    position: absolute;
+    top: 72px;
+    left: 0;
+    width: 100%;
+    background: var(--sol);
+    flex-direction: column;
+    padding: 16px;
+    box-shadow: 0 8px 12px rgba(51, 33, 26, 0.15);
+  }
+
+  .links.aberto {
+    display: flex;
+  }
+}

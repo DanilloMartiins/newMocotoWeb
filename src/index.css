@@ -1,0 +1,46 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --sol: #F5A623;
+  --barro: #C0442E;
+  --barro-escuro: #9A3320;
+  --verde: #4E7A35;
+  --areia: #F7E9CE;
+  --off: #FFFBF2;
+  --marrom: #33211A;
+  --texto: #4A3728;
+}
+
+body {
+  font-family: 'Audiowide', sans-serif;
+  background: var(--off);
+  color: var(--texto);
+}
+
+h1, h2, h3 {
+  font-family: 'Audiowide', sans-serif;
+  font-weight: 400;
+  color: var(--marrom);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+.chapeu {
+  color: var(--barro);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 13px;
+  font-weight: 600;
+}

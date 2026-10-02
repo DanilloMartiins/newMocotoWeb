@@ -1,0 +1,79 @@
+.budega-hero {
+  position: relative;
+  background: url('/assets/bgcardapio.jpg');
+  background-size: cover;
+  background-position: center;
+  min-height: 100%;
+}
+
+.cacto-budega {
+  position: absolute;
+  top: 24px;
+  right: 4%;
+  width: 80px;
+  color: var(--verde);
+  z-index: 3;
+}
+
+.palma-budega {
+  position: absolute;
+  bottom: 0;
+  left: 2%;
+  height: 160px;
+  width: auto;
+  z-index: 3;
+}
+
+.budega-hero .pagina {
+  background: rgba(250, 246, 238, 0.94);
+  min-height: 100%;
+}
+
+.intro {
+  max-width: 640px;
+  margin-bottom: 32px;
+  font-size: 17px;
+}
+
+.grade-budega {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  margin-bottom: 40px;
+}
+
+.secao-budega {
+  background: #fff;
+  border-radius: 8px;
+  padding: 28px 32px;
+}
+
+.secao-budega h2 {
+  font-size: 22px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+
+.secao-budega ul {
+  list-style: none;
+}
+
+.secao-budega li {
+  padding: 12px 0;
+  border-bottom: 1px solid #f0e9dc;
+}
+
+.secao-budega li:last-child {
+  border-bottom: none;
+}
+
+@media (max-width: 768px) {
+  .grade-budega {
+    grid-template-columns: 1fr;
+  }
+
+  .secao-budega {
+    padding: 20px;
+  }
+}

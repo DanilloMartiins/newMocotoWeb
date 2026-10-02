@@ -1,0 +1,57 @@
+.pagina {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+.pagina h1 {
+  font-size: 36px;
+  margin: 12px 0 32px;
+}
+
+.grade-casas {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.casa {
+  background: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.casa img {
+  height: 220px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.casa-corpo {
+  padding: 20px;
+}
+
+.casa-corpo h3 {
+  font-size: 22px;
+}
+
+.horario {
+  color: var(--barro);
+  font-weight: 600;
+  margin: 8px 0 16px;
+  font-size: 14px;
+}
+
+.btn-casa {
+  display: inline-block;
+  background: var(--barro);
+  color: #fff;
+  padding: 10px 24px;
+  border-radius: 4px;
+}
+
+@media (max-width: 768px) {
+  .grade-casas {
+    grid-template-columns: 1fr;
+  }
+}
