@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import Faixa from '../components/Faixa'
 import './Reservas.css'
 
 function Reservas() {
@@ -16,7 +17,8 @@ function Reservas() {
   }
 
   return (
-    <div className="pagina reserva-pagina">
+    <>
+      <div className="pagina reserva-pagina">
       <p className="chapeu">Garanta sua mesa</p>
       <h1>Reservas</h1>
       <div className="reserva-grade">
@@ -43,7 +45,9 @@ function Reservas() {
           <p>Varia por casa, veja em Nossas Casas</p>
         </div>
       </div>
-    </div>
+      </div>
+      <Faixa frase="O sertão é do mundo" tom="creme" />
+    </>
   )
 }
 

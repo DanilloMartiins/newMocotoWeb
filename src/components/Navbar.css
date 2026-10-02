@@ -8,37 +8,40 @@
 }
 
 .topo-dentro {
-  max-width: 1100px;
+  max-width: 1400px;
   margin: 0 auto;
-  padding: 12px 20px;
+  padding: 14px 40px;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 32px;
 }
 
 .logo img {
-  height: 48px;
+  height: 62px;
 }
 
 .links {
   display: flex;
-  gap: 24px;
+  gap: 30px;
   align-items: center;
 }
 
 .links a {
   color: var(--marrom);
-  font-size: 15px;
+  font-size: 17px;
+  white-space: nowrap;
 }
 
-.links a:hover {
+.links a:hover,
+.links a.active {
   color: var(--barro);
 }
 
 .btn-reserva {
   background: var(--barro);
   color: #fff !important;
-  padding: 8px 20px;
+  padding: 10px 26px;
   border-radius: 4px;
   font-weight: 600;
 }
@@ -47,32 +50,62 @@
   background: var(--barro-escuro);
 }
 
-.menu-btn {
+.topo-cta {
   display: none;
-  background: none;
-  border: none;
-  color: var(--marrom);
-  font-size: 26px;
+}
+
+.tabbar {
+  display: none;
+}
+
+@media (max-width: 900px) {
+  .links {
+    display: none;
+  }
+
+  .topo-cta {
+    display: inline-block;
+  }
+
+  .tabbar {
+    display: flex;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+    background: var(--marrom);
+    padding-bottom: env(safe-area-inset-bottom);
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.25);
+  }
+
+  .tabbar a {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3px;
+    padding: 10px 0 8px;
+    color: var(--areia);
+    font-size: 11px;
+  }
+
+  .tabbar svg {
+    width: 24px;
+    height: 24px;
+  }
+
+  .tabbar a.active {
+    color: var(--sol);
+  }
 }
 
 @media (max-width: 768px) {
-  .menu-btn {
-    display: block;
+  .topo-dentro {
+    padding: 10px 16px;
   }
 
-  .links {
-    display: none;
-    position: absolute;
-    top: 72px;
-    left: 0;
-    width: 100%;
-    background: var(--sol);
-    flex-direction: column;
-    padding: 16px;
-    box-shadow: 0 8px 12px rgba(51, 33, 26, 0.15);
-  }
-
-  .links.aberto {
-    display: flex;
+  .logo img {
+    height: 48px;
   }
 }

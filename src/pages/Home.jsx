@@ -1,13 +1,32 @@
+import { useRef } from 'react'
 import { Link } from 'react-router-dom'
 import { Mandacaru, Palma, Sol } from '../components/Sertao'
+import Faixa from '../components/Faixa'
 import './Home.css'
 
+// cada foto abre o maps do endereço da casa
+const mapas = [
+  { foto: '/assets/museu1-1.webp', nome: 'Vila Medeiros', link: 'https://goo.gl/maps/PMF5d9Xk9sR2' },
+  { foto: '/assets/mocoto-vilaclementino.webp', nome: 'Vila Clementino', link: 'https://maps.app.goo.gl/XXpoQK9Qt9DuD1AZ8' },
+  { foto: '/assets/mocoto-leopoldina.webp', nome: 'Vila Leopoldina', link: 'https://goo.gl/maps/kvthQfHnP855LUvq8?coh=178572&entry=tt' },
+  { foto: '/assets/pinheiros.webp', nome: 'Café Pinheiros', link: 'https://www.google.com/maps/search/?api=1&query=Mocot%C3%B3+Caf%C3%A9+Mercado+de+Pinheiros' },
+]
 function Home() {
+  const faixa = useRef(null)
+
+  // roda a faixa pro lado (um card por clique)
+  function rolar(dir) {
+    faixa.current.scrollBy({ left: dir * 300, behavior: 'smooth' })
+  }
+
+  // so prato com nome certo, sem inventar legenda
   const pratos = [
-    { foto: '/assets/moqueca.jpg', nome: 'Escondidinho de camarão', desc: 'Com creme de moqueca' },
-    { foto: '/assets/pratos1.jpg', nome: 'Baião de dois', desc: 'Queijo coalho e carne-seca' },
-    { foto: '/assets/pratos11.jpg', nome: 'Torresmo', desc: 'O clássico da casa' },
-    { foto: '/assets/pudim.jpg', nome: 'Pudim de tapioca', desc: 'Sobremesa pra fechar' },
+    { foto: '/assets/moqueca.webp', nome: 'Escondidinho de camarão', desc: 'Com creme de moqueca' },
+    { foto: '/assets/pratos1.webp', nome: 'Baião de dois', desc: 'Queijo coalho e carne-seca' },
+    { foto: '/assets/pratos3.webp', nome: 'Do tacho', desc: 'Receita da casa' },
+    { foto: '/assets/pratos11.webp', nome: 'Torresmo', desc: 'O clássico da casa' },
+    { foto: '/assets/caipirinha.webp', nome: 'Caipirinha', desc: 'Do nosso bar' },
+    { foto: '/assets/pudim.webp', nome: 'Pudim de tapioca', desc: 'Sobremesa pra fechar' },
   ]
 
   return (
@@ -27,9 +46,11 @@ function Home() {
         </div>
       </section>
 
+      <Faixa frase="Do sertão na quebrada para o mundo" tom="tan" />
+
       <section className="sobre">
         <Mandacaru className="cacto-sobre" />
-        <img src="/assets/museu.jpg" alt="Antigo Mocotó" />
+        <img src="/assets/museu.webp" alt="Antigo Mocotó" />
         <div>
           <p className="chapeu">O restaurante</p>
           <h2>Do balcão da Vila Medeiros pro mundo</h2>
@@ -47,14 +68,27 @@ function Home() {
         <Mandacaru className="cacto-destaque" />
         <p className="chapeu">Pra abrir o apetite</p>
         <h2>Os queridinhos</h2>
-        <div className="grade-pratos">
-          {pratos.map((p) => (
-            <div className="prato" key={p.nome}>
-              <img src={p.foto} alt={p.nome} />
-              <h3>{p.nome}</h3>
-              <p>{p.desc}</p>
-            </div>
-          ))}
+        <div className="carrossel-linha">
+          <button className="seta" onClick={() => rolar(-1)} aria-label="Anterior">‹</button>
+          <div className="faixa-pratos" ref={faixa}>
+            {pratos.map((p) => (
+              <div className="prato" key={p.nome}>
+                <img src={p.foto} alt={p.nome} loading="lazy" />
+                <h3>{p.nome}</h3>
+                <p>{p.desc}</p>
+              </div>
+            ))}
+          </div>
+          <button className="seta" onClick={() => rolar(1)} aria-label="Próximo">›</button>
+        </div>
+      </section>
+
+      <section className="fecho">
+        <p className="fecho-frase">“O sertão é do mundo”</p>
+        <div className="fecho-gaiolas">
+          <img src="/assets/producaoanimal.png" alt="Brasil sem gaiolas" />
+          <p>Mocotó adere à campanha <strong>Brasil Sem Gaiolas</strong> do Fórum Animal.</p>
+          <a href="https://www.instagram.com/p/C4L0cj_R6T9/?igsh=bm4wZDFzZDJseGhs" target="_blank" rel="noreferrer">Saiba mais ›</a>
         </div>
       </section>
     </div>

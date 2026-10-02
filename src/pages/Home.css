@@ -1,11 +1,15 @@
 .hero {
   position: relative;
   overflow: hidden;
-  background: linear-gradient(rgba(51, 33, 26, 0.7), rgba(154, 51, 32, 0.75)), url('/assets/fachada01.jpg');
+  background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.35)), url('/assets/fachada01.webp');
   background-size: cover;
   background-position: center;
   color: var(--areia);
-  padding: 110px 20px 140px;
+  padding: 140px 20px 160px;
+  min-height: 92vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   text-align: center;
 }
 
@@ -16,28 +20,44 @@
 
 .hero .chapeu {
   color: var(--sol);
+  font-size: 16px;
+  letter-spacing: 3px;
 }
 
 .hero h1 {
   color: #fff;
-  font-size: 44px;
-  max-width: 700px;
-  margin: 12px auto;
+  font-size: clamp(42px, 7vw, 88px);
+  line-height: 1.05;
+  max-width: 1000px;
+  margin: 16px auto;
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.6);
+}
+
+.hero-texto > p {
+  text-shadow: 0 1px 8px rgba(0, 0, 0, 0.6);
+  font-size: 19px;
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.hero-texto > p {
+  text-shadow: 0 1px 8px rgba(0, 0, 0, 0.6);
 }
 
 .hero-botoes {
-  margin-top: 28px;
+  margin-top: 36px;
   display: flex;
-  gap: 12px;
+  gap: 14px;
   justify-content: center;
 }
 
 .btn-cheio {
   background: var(--sol);
   color: var(--marrom);
-  padding: 12px 28px;
+  padding: 15px 36px;
   border-radius: 4px;
   font-weight: 600;
+  font-size: 17px;
 }
 
 .btn-cheio:hover {
@@ -47,8 +67,45 @@
 .btn-vazio {
   border: 1px solid var(--areia);
   color: #fff;
-  padding: 12px 28px;
+  padding: 15px 36px;
   border-radius: 4px;
+  font-size: 17px;
+}
+
+.carrossel-linha {
+  position: relative;
+  z-index: 2;
+  max-width: 1320px;
+  margin: 0 auto;
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+
+.faixa-pratos {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  padding: 8px 4px 20px;
+  scrollbar-width: none;
+}
+
+.faixa-pratos::-webkit-scrollbar {
+  display: none;
+}
+
+.seta {
+  flex-shrink: 0;
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  border: none;
+  background: var(--marrom);
+  color: var(--areia);
+  font-size: 28px;
+  line-height: 1;
+  cursor: pointer;
 }
 
 .sol-hero {
@@ -79,11 +136,11 @@
 
 .sobre {
   position: relative;
-  max-width: 1100px;
+  max-width: 1320px;
   margin: 0 auto;
-  padding: 70px 20px;
+  padding: 100px 20px;
   display: flex;
-  gap: 48px;
+  gap: 56px;
   align-items: center;
 }
 
@@ -93,7 +150,7 @@
 }
 
 .sobre h2 {
-  font-size: 32px;
+  font-size: clamp(30px, 4vw, 48px);
   margin: 12px 0 16px;
 }
 
@@ -115,15 +172,15 @@
 
 .destaques {
   background: var(--areia);
-  padding: 70px 20px;
+  padding: 100px 20px;
   text-align: center;
   position: relative;
   overflow: hidden;
 }
 
 .destaques h2 {
-  font-size: 32px;
-  margin: 12px 0 32px;
+  font-size: clamp(34px, 5vw, 56px);
+  margin: 12px 0 40px;
 }
 
 .palma-destaque {
@@ -154,7 +211,9 @@
 }
 
 .prato {
-  flex: 1;
+  min-width: 300px;
+  max-width: 300px;
+  scroll-snap-align: start;
   background: #fff;
   border-radius: 8px;
   overflow: hidden;
@@ -163,13 +222,14 @@
 }
 
 .prato img {
-  height: 180px;
+  height: 210px;
   width: 100%;
   object-fit: cover;
 }
 
 .prato h3 {
-  padding: 16px 16px 4px;
+  padding: 18px 18px 4px;
+  font-size: 20px;
 }
 
 .prato p {
@@ -177,13 +237,54 @@
   font-size: 14px;
 }
 
+.fecho {
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: 72px 20px;
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: 40px;
+  align-items: center;
+}
+
+.fecho-frase {
+  font-size: clamp(30px, 4.5vw, 56px);
+  line-height: 1.15;
+  color: var(--barro-escuro);
+}
+
+.fecho-gaiolas {
+  aspect-ratio: 1 / 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 14px rgba(51, 33, 26, 0.08);
+  padding: 28px;
+  text-align: center;
+  font-size: 15px;
+}
+
+.fecho-gaiolas img {
+  width: 160px;
+}
+
+.fecho-gaiolas a {
+  color: var(--barro);
+  font-weight: 600;
+}
+
 @media (max-width: 768px) {
   .hero {
-    padding: 70px 20px 110px;
+    padding: 100px 20px 120px;
+    min-height: 80vh;
   }
 
   .hero h1 {
-    font-size: 30px;
+    font-size: 38px;
   }
 
   .sol-hero {
@@ -212,8 +313,22 @@
     width: 100%;
   }
 
-  .grade-pratos {
-    flex-direction: column;
+  .faixa-pratos {
+    gap: 14px;
+  }
+
+  .prato {
+    min-width: 240px;
+    max-width: 240px;
+  }
+
+  .seta {
+    display: none;
+  }
+
+  .fecho {
+    grid-template-columns: 1fr;
+    text-align: left;
   }
 
   .palma-destaque,

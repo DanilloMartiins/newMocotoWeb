@@ -1,0 +1,157 @@
+.pagina-equipe {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 100px 20px;
+  text-align: center;
+}
+
+.pagina-equipe h1 {
+  font-size: clamp(40px, 6vw, 72px);
+  margin: 12px 0 8px;
+}
+
+.lema {
+  color: var(--barro-escuro);
+  font-size: 20px;
+  margin-bottom: 12px;
+}
+
+.intro {
+  max-width: 560px;
+  margin: 0 auto 48px;
+  font-size: 17px;
+}
+
+.grade-equipe {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 24px;
+}
+
+.quadro-chef {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+  text-align: left;
+  background: var(--areia);
+  border: 3px solid var(--marrom);
+  outline: 1px solid var(--marrom);
+  outline-offset: -8px;
+  border-radius: 4px;
+  padding: 40px;
+  margin-bottom: 56px;
+}
+
+.quadro-chef img {
+  width: 280px;
+  flex-shrink: 0;
+  border: 2px solid var(--marrom);
+  filter: sepia(0.25);
+}
+
+.quadro-chef h2 {
+  font-size: clamp(28px, 4vw, 44px);
+  margin: 8px 0 16px;
+}
+
+.quadro-chef .linha {
+  font-size: 16px;
+  text-align: left;
+  margin-bottom: 12px;
+}
+
+.cordel {
+  perspective: 1200px;
+  cursor: pointer;
+}
+
+.cordel-dentro {
+  position: relative;
+  min-height: 430px;
+  transform-style: preserve-3d;
+  transition: transform 0.6s ease;
+}
+
+.cordel.virado .cordel-dentro {
+  transform: rotateY(180deg);
+}
+
+.face {
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  background: var(--areia);
+  border: 3px solid var(--marrom);
+  outline: 1px solid var(--marrom);
+  outline-offset: -8px;
+  border-radius: 4px;
+  padding: 28px 20px 20px;
+}
+
+.face.verso {
+  position: absolute;
+  inset: 0;
+  overflow-y: auto;
+  transform: rotateY(180deg);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.face img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  object-position: top;
+  border: 2px solid var(--marrom);
+  filter: sepia(0.25);
+}
+
+.face h3 {
+  margin: 14px 0 2px;
+  font-size: 21px;
+}
+
+.cargo {
+  color: var(--barro-escuro);
+  font-size: 14px;
+}
+
+.dica {
+  margin-top: 10px;
+  font-size: 12px;
+  opacity: 0.6;
+}
+
+.face .linha {
+  font-size: 13.5px;
+  line-height: 1.65;
+  color: var(--marrom);
+  margin: 0 0 10px;
+  text-align: left;
+}
+
+.face h4 {
+  font-size: 17px;
+  color: var(--barro-escuro);
+  margin-bottom: 10px;
+}
+
+@media (max-width: 768px) {
+  .pagina-equipe {
+    padding: 70px 16px;
+  }
+
+  .quadro-chef {
+    flex-direction: column;
+    padding: 28px 22px;
+  }
+
+  .quadro-chef img {
+    width: 100%;
+    max-width: 320px;
+  }
+
+  .cordel-dentro {
+    min-height: 400px;
+  }
+}

@@ -5,7 +5,7 @@
 }
 
 .rodape-dentro {
-  max-width: 1100px;
+  max-width: 1320px;
   margin: 0 auto;
   padding: 40px 20px;
   display: flex;
@@ -31,11 +31,4 @@
   padding: 16px;
   border-top: 1px solid #5a4433;
   font-size: 13px;
-}
-
-@media (max-width: 768px) {
-  .rodape-dentro {
-    flex-direction: column;
-    gap: 24px;
-  }
 }

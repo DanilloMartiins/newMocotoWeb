@@ -1,4 +1,5 @@
 import { Mandacaru, Palma } from '../components/Sertao'
+import Faixa from '../components/Faixa'
 import './Budega.css'
 
 function Budega() {
@@ -60,7 +61,8 @@ function Budega() {
   ]
 
   return (
-    <div className="budega-hero">
+    <>
+      <div className="budega-hero">
       <Mandacaru className="cacto-budega" />
       <Palma className="palma-budega" />
       <div className="pagina">
@@ -94,6 +96,8 @@ function Budega() {
         </div>
       </div>
     </div>
+      <Faixa frase="Família é a nossa liga" tom="tan" />
+    </>
   )
 }
 

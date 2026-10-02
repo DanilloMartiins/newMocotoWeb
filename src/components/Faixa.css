@@ -1,0 +1,26 @@
+.faixa {
+  text-align: center;
+  padding: 72px 20px;
+}
+
+.faixa p {
+  font-size: clamp(28px, 5vw, 60px);
+  line-height: 1.15;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.faixa-creme {
+  background: var(--off);
+  color: var(--barro-escuro);
+}
+
+.faixa-vinho {
+  background: var(--barro-escuro);
+  color: var(--sol);
+}
+
+.faixa-tan {
+  background: #d9b98c;
+  color: var(--marrom);
+}
