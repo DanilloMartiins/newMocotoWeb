@@ -101,6 +101,8 @@
   flex-shrink: 0;
   width: 52px;
   height: 52px;
+  aspect-ratio: 1 / 1;
+  padding: 0;
   border-radius: 50%;
   border: none;
   background: var(--marrom);

@@ -25,6 +25,10 @@ function Navbar() {
           <Link to="/" className="logo">
             <img src="/assets/mocoto.png" alt="Mocotó" />
           </Link>
+          <NavLink to="/budega" className="topo-budega">
+            <Icon d="M3 11l9-8 9 8 M5 10v10h14V10 M10 20v-6h4v6" />
+            <span>A budega</span>
+          </NavLink>
           <nav className="links">
             <NavLink to="/">Início</NavLink>
             <NavLink to="/casas">Nossas Casas</NavLink>

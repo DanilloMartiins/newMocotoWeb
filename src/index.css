@@ -15,6 +15,11 @@
   --texto: #4A3728;
 }
 
+html {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
 body {
   font-family: 'Audiowide', sans-serif;
   background: var(--off);
@@ -33,7 +38,7 @@ a {
   color: inherit;
 }
 
-img {
+img, svg, video {
   max-width: 100%;
   display: block;
 }

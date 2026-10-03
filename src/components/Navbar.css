@@ -1,6 +1,7 @@
 .topo {
   position: fixed;
   top: 0;
+  left: 0;
   width: 100%;
   background: var(--sol);
   box-shadow: 0 2px 8px rgba(51, 33, 26, 0.15);
@@ -55,6 +56,10 @@
   white-space: nowrap;
 }
 
+.topo-budega {
+  display: none;
+}
+
 .tabbar {
   display: none;
 }
@@ -66,6 +71,23 @@
 
   .topo-cta {
     display: inline-block;
+  }
+
+  .topo-budega {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2px;
+    color: var(--marrom);
+    font-size: 13px;
+    font-weight: 600;
+    white-space: nowrap;
+  }
+
+  .topo-budega svg {
+    width: 24px;
+    height: 24px;
+    flex-shrink: 0;
   }
 
   .tabbar {
@@ -138,6 +160,15 @@
   .topo-cta {
     font-size: 14px;
     padding: 8px 16px;
+  }
+
+  .topo-budega {
+    font-size: 11px;
+  }
+
+  .topo-budega svg {
+    width: 22px;
+    height: 22px;
   }
 
   .tabbar a {
