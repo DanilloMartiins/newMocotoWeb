@@ -208,8 +208,11 @@
   }
 
   .cartaz-cacto {
-    width: 48px;
-    left: -28px;
+    width: 34px;
+    left: auto;
+    right: 4px;
+    top: 4px;
+    bottom: auto;
   }
 
   .cartaz-flor {
