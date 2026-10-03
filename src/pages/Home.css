@@ -336,3 +336,22 @@
     display: none;
   }
 }
+
+@media (max-width: 480px) {
+  .hero-botoes {
+    flex-direction: column;
+  }
+
+  .btn-cheio,
+  .btn-vazio {
+    width: 100%;
+  }
+
+  .destaques {
+    padding: 70px 16px;
+  }
+
+  .fecho {
+    padding: 56px 16px;
+  }
+}

@@ -3,25 +3,35 @@
   right: 18px;
   bottom: 18px;
   z-index: 200;
-  width: 84px;
-  height: 84px;
-  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  gap: 8px;
   border: 3px solid var(--marrom);
   background: var(--sol);
-  padding: 5px;
+  border-radius: 999px;
+  padding: 6px 16px 6px 6px;
   cursor: pointer;
   filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.35));
   transition: transform 0.2s ease;
 }
 
 .pet-selo:hover {
-  transform: scale(1.08);
+  transform: scale(1.05);
 }
 
 .pet-selo img {
-  width: 100%;
-  height: 100%;
+  width: 38px;
+  height: 38px;
   border-radius: 50%;
+  background: var(--marrom);
+  padding: 5px;
+}
+
+.pet-selo span {
+  color: var(--marrom);
+  font-weight: 700;
+  font-size: 14px;
+  white-space: nowrap;
 }
 
 .pet-fundo {
@@ -97,6 +107,13 @@
   letter-spacing: 2px;
   font-size: 15px;
   margin-bottom: 10px;
+}
+
+@media (max-width: 900px) {
+  .pet-selo {
+    bottom: calc(78px + env(safe-area-inset-bottom));
+    right: 12px;
+  }
 }
 
 @media (max-width: 768px) {

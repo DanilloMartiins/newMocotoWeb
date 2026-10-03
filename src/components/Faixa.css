@@ -24,3 +24,9 @@
   background: #d9b98c;
   color: var(--marrom);
 }
+
+@media (max-width: 480px) {
+  .faixa {
+    padding: 52px 16px;
+  }
+}

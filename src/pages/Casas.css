@@ -55,3 +55,22 @@
     grid-template-columns: 1fr;
   }
 }
+
+@media (max-width: 480px) {
+  .pagina {
+    padding: 28px 16px;
+  }
+
+  .pagina h1 {
+    font-size: 30px;
+    margin-bottom: 24px;
+  }
+
+  .casa img {
+    height: 180px;
+  }
+
+  .casa-corpo {
+    padding: 16px;
+  }
+}

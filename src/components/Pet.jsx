@@ -17,7 +17,8 @@ function Pet() {
   return (
     <>
       <button className="pet-selo" onClick={() => setAberto(true)} aria-label="Pet friendly">
-        <img src="/assets/PetSelo.png" alt="Pet friendly" />
+        <img src="/assets/pata.png" alt="" aria-hidden="true" />
+        <span>Pet friendly</span>
       </button>
       {aberto && (
         <div className="pet-fundo" onClick={() => setAberto(false)}>

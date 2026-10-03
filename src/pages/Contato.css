@@ -78,4 +78,18 @@
   .contato-extra {
     grid-template-columns: 1fr;
   }
+
+  .cartao-contato {
+    padding: 20px;
+  }
+
+  .contato-botoes {
+    flex-wrap: wrap;
+  }
+
+  .contato-botoes a {
+    flex: 1;
+    text-align: center;
+    white-space: nowrap;
+  }
 }

@@ -217,3 +217,39 @@
     right: -24px;
   }
 }
+
+@media (max-width: 480px) {
+  .pagina-cardapio {
+    padding: 28px 12px 48px;
+  }
+
+  .cartaz {
+    padding: 0 16px 30px;
+  }
+
+  .filtros button {
+    padding: 6px 14px;
+    font-size: 13px;
+  }
+
+  .prato-linha {
+    flex-wrap: nowrap;
+    gap: 8px;
+  }
+
+  .prato-nome {
+    min-width: 0;
+  }
+
+  .prato-nome strong {
+    font-size: 14px;
+  }
+
+  .prato-nome span {
+    font-size: 12px;
+  }
+
+  .preco {
+    font-size: 13px;
+  }
+}

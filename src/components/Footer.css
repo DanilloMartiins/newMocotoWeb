@@ -32,3 +32,14 @@
   border-top: 1px solid #5a4433;
   font-size: 13px;
 }
+
+@media (max-width: 768px) {
+  .rodape-dentro {
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .copy {
+    padding-bottom: calc(16px + env(safe-area-inset-bottom));
+  }
+}
