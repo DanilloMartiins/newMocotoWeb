@@ -136,6 +136,18 @@
   .tabbar a.active {
     color: var(--sol);
   }
+
+  .tabbar a:first-child.active span {
+    color: var(--areia);
+  }
+
+  .tabbar a:first-child .tab-logo {
+    filter: sepia(1) saturate(3.5) hue-rotate(-12deg) brightness(1.05);
+  }
+
+  .tabbar a:first-child.active .tab-logo {
+    filter: none;
+  }
 }
 
 @media (max-width: 768px) {

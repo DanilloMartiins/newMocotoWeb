@@ -30,6 +30,17 @@
   padding: 5px;
 }
 
+.pet-icone-desk {
+  width: 46px;
+  height: 46px;
+  background: none;
+  padding: 0;
+}
+
+.pet-icone-mob {
+  display: none;
+}
+
 .pet-selo span {
   color: var(--marrom);
   font-weight: 700;
@@ -132,6 +143,14 @@
 
   .pet-selo span {
     display: none;
+  }
+
+  .pet-icone-desk {
+    display: none;
+  }
+
+  .pet-icone-mob {
+    display: block;
   }
 
   .pet-modal {

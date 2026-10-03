@@ -10,9 +10,38 @@
   margin: 12px 0 8px;
 }
 
-.contato-geral {
-  font-size: 19px;
+.email {
+  color: var(--barro-escuro);
+  font-weight: 600;
+  overflow-wrap: anywhere;
+}
+
+.contato-social {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
   margin-bottom: 40px;
+}
+
+.contato-social a {
+  width: 46px;
+  height: 46px;
+  aspect-ratio: 1 / 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--barro);
+  color: var(--off);
+  border-radius: 50%;
+}
+
+.contato-social a:hover {
+  background: var(--barro-escuro);
+}
+
+.contato-social svg {
+  width: 22px;
+  height: 22px;
 }
 
 .grade-contato {

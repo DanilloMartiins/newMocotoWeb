@@ -8,6 +8,7 @@ function Casas() {
     { foto: '/assets/mocoto-vilaclementino.webp', nome: 'Vila Clementino', desc: 'Zona sul, salão amplo', horario: 'Todos os dias, 12h às 16h', link: 'https://reservation.getin.app/O6pjaRP5' },
     { foto: '/assets/mocoto-leopoldina.webp', nome: 'Vila Leopoldina', desc: 'Zona oeste, clima de roça', horario: 'Ter a sáb 12–22h • Dom 12–16h', link: 'https://reservation.getin.app/M1mArV13' },
     { foto: '/assets/pinheiros.webp', nome: 'Café Pinheiros', desc: 'Café e quitutes o dia todo', horario: 'Seg a sáb, 11h às 17h', link: '/reservas' },
+    { foto: '/assets/balaio-ims.webp', nome: 'Balaio IMS', desc: 'Na Paulista, dentro do IMS', horario: 'Ter a qui 12–16h • Sex e sáb 12–16h e 19–22h • Dom 12–17h', link: 'https://balaioims.com.br/' },
   ]
 
   return (
