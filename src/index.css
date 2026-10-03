@@ -19,6 +19,7 @@ body {
   font-family: 'Audiowide', sans-serif;
   background: var(--off);
   color: var(--texto);
+  overflow-x: hidden;
 }
 
 h1, h2, h3 {

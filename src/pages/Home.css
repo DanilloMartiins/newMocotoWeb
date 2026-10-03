@@ -83,6 +83,8 @@
 }
 
 .faixa-pratos {
+  flex: 1;
+  min-width: 0;
   display: flex;
   gap: 20px;
   overflow-x: auto;

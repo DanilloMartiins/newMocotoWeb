@@ -81,7 +81,8 @@
   }
 
   .tabbar a {
-    flex: 1;
+    flex: 1 1 0;
+    min-width: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -91,14 +92,23 @@
     font-size: 11px;
   }
 
+  .tabbar a span {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 100%;
+  }
+
   .tabbar svg {
     width: 24px;
     height: 24px;
+    flex-shrink: 0;
   }
 
   .tabbar .tab-logo {
-    height: 24px;
+    height: 20px;
     width: auto;
+    flex-shrink: 0;
   }
 
   .tabbar a.active {
