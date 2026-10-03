@@ -5,11 +5,15 @@
   z-index: 200;
   display: flex;
   align-items: center;
-  gap: 8px;
+  justify-content: center;
+  width: 76px;
+  height: 76px;
+  min-width: 76px;
+  aspect-ratio: 1 / 1;
   border: 3px solid var(--marrom);
   background: var(--sol);
-  border-radius: 999px;
-  padding: 6px 16px 6px 6px;
+  border-radius: 50%;
+  padding: 0;
   cursor: pointer;
   filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.35));
   transition: transform 0.2s ease;
@@ -30,18 +34,19 @@
   padding: 5px;
 }
 
-.pet-icone-desk {
-  width: 46px;
-  height: 46px;
+.pet-selo img.pet-icone-desk {
+  width: 60px;
+  height: 60px;
   background: none;
   padding: 0;
 }
 
-.pet-icone-mob {
+.pet-selo img.pet-icone-mob {
   display: none;
 }
 
 .pet-selo span {
+  display: none;
   color: var(--marrom);
   font-weight: 700;
   font-size: 14px;
@@ -145,11 +150,11 @@
     display: none;
   }
 
-  .pet-icone-desk {
+  .pet-selo img.pet-icone-desk {
     display: none;
   }
 
-  .pet-icone-mob {
+  .pet-selo img.pet-icone-mob {
     display: block;
   }
 
