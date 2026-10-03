@@ -76,4 +76,33 @@
   .secao-budega {
     padding: 20px;
   }
+
+  .cacto-budega,
+  .palma-budega {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .secao-budega .prato-linha {
+    flex-wrap: wrap;
+    row-gap: 4px;
+  }
+
+  .secao-budega .prato-nome {
+    flex: 1 1 160px;
+    min-width: 0;
+  }
+
+  .secao-budega .prato-nome strong {
+    overflow-wrap: break-word;
+  }
+
+  .secao-budega .preco {
+    white-space: normal;
+    overflow-wrap: anywhere;
+    font-size: clamp(12px, 3.4vw, 14px);
+    margin-left: auto;
+    text-align: right;
+  }
 }
