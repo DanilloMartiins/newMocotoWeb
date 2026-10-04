@@ -120,7 +120,7 @@ function Equipe() {
           ler a história de quem faz o Mocotó.
         </p>
         <div className="quadro-chef">
-        <img src={chef.foto} alt={chef.nome} />
+        <img src={chef.foto} alt={chef.nome} width="1000" height="1192" loading="lazy" />
         <div>
           <p className="chapeu">O chef</p>
           <h2>{chef.nome}</h2>

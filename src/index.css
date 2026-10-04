@@ -38,6 +38,11 @@ a {
   color: inherit;
 }
 
+:focus-visible {
+  outline: 3px solid var(--barro);
+  outline-offset: 2px;
+}
+
 img, svg, video {
   max-width: 100%;
   display: block;

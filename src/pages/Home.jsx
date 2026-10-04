@@ -80,7 +80,7 @@ function Home() {
 
       <section className="sobre">
         <Mandacaru className="cacto-sobre" />
-        <img src="/assets/museu.webp" alt="Antigo Mocotó" />
+        <img src="/assets/museu.webp" alt="Antigo Mocotó" width="800" height="428" loading="lazy" />
         <div>
           <p className="chapeu">O restaurante</p>
           <h2>Do balcão da Vila Medeiros pro mundo</h2>
@@ -116,7 +116,7 @@ function Home() {
       <section className="fecho">
         <p className="fecho-frase">“O sertão é do mundo”</p>
         <div className="fecho-gaiolas">
-          <img src="/assets/producaoanimal.png" alt="Brasil sem gaiolas" />
+          <img src="/assets/producaoanimal.png" alt="Brasil sem gaiolas" width="232" height="120" loading="lazy" />
           <p>Mocotó adere à campanha <strong>Brasil Sem Gaiolas</strong> do Fórum Animal.</p>
           <a href="https://www.instagram.com/p/C4L0cj_R6T9/?igsh=bm4wZDFzZDJseGhs" target="_blank" rel="noreferrer">Saiba mais ›</a>
         </div>
