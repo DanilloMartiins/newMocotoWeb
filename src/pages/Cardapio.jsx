@@ -1,5 +1,4 @@
-import { Head } from 'vite-react-ssg'
-import { SITE_URL } from '../seo.js'
+import SEOHead from '../components/SEOHead'
 import { useState } from 'react'
 import { Mandacaru } from '../components/Sertao'
 import './Cardapio.css'
@@ -106,11 +105,11 @@ function Cardapio() {
 
   return (
     <div className="pagina-cardapio">
-      <Head>
-        <title>Cardápio | Mocotó</title>
-        <meta name="description" content="Baião de dois, dadinhos de tapioca, torresmo, caipirinhas e doces. Veja o cardápio do Mocotó." />
-        <link rel="canonical" href={SITE_URL + '/cardapio'} />
-      </Head>
+      <SEOHead
+        title="Cardápio | Mocotó"
+        description="Baião de dois, dadinhos de tapioca, torresmo, caipirinhas e doces. Veja o cardápio do Mocotó."
+        path="/cardapio"
+      />
       <div className="cartaz">
         <div className="faixa">
           {Array.from({ length: 22 }).map((_, i) => (

@@ -1,5 +1,4 @@
-import { Head } from 'vite-react-ssg'
-import { SITE_URL } from '../seo.js'
+import SEOHead from '../components/SEOHead'
 import { Mandacaru, Palma } from '../components/Sertao'
 import Faixa from '../components/Faixa'
 import './Budega.css'
@@ -64,11 +63,11 @@ function Budega() {
 
   return (
     <>
-      <Head>
-        <title>A budega | Mocotó</title>
-        <meta name="description" content="Empório Mocotó: farinha, rapadura, cachaça, doces e camisetas pra levar pra casa." />
-        <link rel="canonical" href={SITE_URL + '/budega'} />
-      </Head>
+      <SEOHead
+        title="A budega | Mocotó"
+        description="Empório Mocotó: farinha, rapadura, cachaça, doces e camisetas pra levar pra casa."
+        path="/budega"
+      />
       <div className="budega-hero">
       <Mandacaru className="cacto-budega" />
       <Palma className="palma-budega" />

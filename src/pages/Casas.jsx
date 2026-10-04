@@ -1,4 +1,5 @@
 import { Head } from 'vite-react-ssg'
+import SEOHead from '../components/SEOHead'
 import { SITE_URL } from '../seo.js'
 import { Link } from 'react-router-dom'
 import Faixa from '../components/Faixa'
@@ -50,10 +51,12 @@ function Casas() {
 
   return (
     <>
+      <SEOHead
+        title="Nossas casas | Mocotó"
+        description="Conheça as casas do Mocotó: Vila Medeiros, Vila Clementino, Vila Leopoldina, Café Pinheiros e Balaio IMS."
+        path="/casas"
+      />
       <Head>
-        <title>Nossas casas | Mocotó</title>
-        <meta name="description" content="Conheça as casas do Mocotó: Vila Medeiros, Vila Clementino, Vila Leopoldina, Café Pinheiros e Balaio IMS." />
-        <link rel="canonical" href={SITE_URL + '/casas'} />
         <script type="application/ld+json">{JSON.stringify({ '@context': 'https://schema.org', '@graph': lugares })}</script>
       </Head>
       <div className="pagina">

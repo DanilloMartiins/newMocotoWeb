@@ -1,4 +1,5 @@
 import { Head } from 'vite-react-ssg'
+import SEOHead from '../components/SEOHead'
 import { SITE_URL, SEO_PADRAO } from '../seo.js'
 import { useRef } from 'react'
 import { Link } from 'react-router-dom'
@@ -55,10 +56,8 @@ function Home() {
 
   return (
     <div>
+      <SEOHead title={SEO_PADRAO.titulo} description={SEO_PADRAO.descricao} path="/" />
       <Head>
-        <title>{SEO_PADRAO.titulo}</title>
-        <meta name="description" content={SEO_PADRAO.descricao} />
-        <link rel="canonical" href={SITE_URL + '/'} />
         <script type="application/ld+json">{JSON.stringify(restaurante)}</script>
       </Head>
       <section className="hero">

@@ -1,5 +1,4 @@
-import { Head } from 'vite-react-ssg'
-import { SITE_URL } from '../seo.js'
+import SEOHead from '../components/SEOHead'
 import { useState } from 'react'
 import Faixa from '../components/Faixa'
 import './Reservas.css'
@@ -20,11 +19,11 @@ function Reservas() {
 
   return (
     <>
-      <Head>
-        <title>Reservas | Mocotó</title>
-        <meta name="description" content="Reserve sua mesa no Mocotó: Vila Medeiros, Vila Clementino ou Vila Leopoldina." />
-        <link rel="canonical" href={SITE_URL + '/reservas'} />
-      </Head>
+      <SEOHead
+        title="Reservas | Mocotó"
+        description="Reserve sua mesa no Mocotó: Vila Medeiros, Vila Clementino ou Vila Leopoldina."
+        path="/reservas"
+      />
       <div className="pagina reserva-pagina">
       <p className="chapeu">Garanta sua mesa</p>
       <h1>Reservas</h1>
