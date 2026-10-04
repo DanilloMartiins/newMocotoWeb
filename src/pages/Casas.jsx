@@ -13,12 +13,48 @@ function Casas() {
     { foto: '/assets/balaio-ims.webp', nome: 'Balaio IMS', desc: 'Na Paulista, dentro do IMS', horario: 'Ter a qui 12–16h • Sex e sáb 12–16h e 19–22h • Dom 12–17h', link: 'https://balaioims.com.br/' },
   ]
 
+  // telefones e endereço da matriz já existem no código (Contato); matriz sem tel próprio = TODO
+  const telefones = {
+    'Vila Clementino': '(11) 3566-3732',
+    'Vila Leopoldina': '(11) 3294-4814',
+    'Café Pinheiros': '(11) 3530-1365',
+    'Balaio IMS': '(11) 2842-9123',
+  }
+
+  const enderecos = {
+    'Vila Medeiros': 'Av. Nossa Sra do Loreto, 1100 — São Paulo/SP',
+    'Vila Clementino': 'R. Pedro de Toledo, 450 — São Paulo/SP',
+    'Vila Leopoldina': 'R. Aroaba, 333 — São Paulo/SP',
+    'Café Pinheiros': 'R. Pedro Cristi, 89 — São Paulo/SP',
+    'Balaio IMS': 'Av. Paulista, 2424 — São Paulo/SP',
+  }
+
+  // TODO confirmar com o restaurante: tel da matriz, faixa de preço, CEPs, geo e horários estruturados
+  const lugares = casas.map((c) => {
+    const end = c.end || enderecos[c.nome] || ''
+    return {
+      '@type': 'Restaurant',
+      name: 'Mocotó ' + c.nome,
+      url: SITE_URL,
+      image: SITE_URL + '/og.jpg',
+      address: {
+        '@type': 'PostalAddress',
+        streetAddress: end.split('—')[0].trim(),
+        addressLocality: 'São Paulo',
+        addressRegion: 'SP',
+        addressCountry: 'BR',
+      },
+      ...(telefones[c.nome] ? { telephone: telefones[c.nome] } : {}),
+    }
+  })
+
   return (
     <>
       <Head>
         <title>Nossas casas | Mocotó</title>
         <meta name="description" content="Conheça as casas do Mocotó: Vila Medeiros, Vila Clementino, Vila Leopoldina, Café Pinheiros e Balaio IMS." />
         <link rel="canonical" href={SITE_URL + '/casas'} />
+        <script type="application/ld+json">{JSON.stringify({ '@context': 'https://schema.org', '@graph': lugares })}</script>
       </Head>
       <div className="pagina">
         <p className="chapeu">Onde nos achar</p>

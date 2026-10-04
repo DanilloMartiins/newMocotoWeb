@@ -16,6 +16,28 @@ const mapas = [
 function Home() {
   const faixa = useRef(null)
 
+  // TODO confirmar com o restaurante: faixa de preço, CEP, geo e horários estruturados
+  const restaurante = {
+    '@context': 'https://schema.org',
+    '@type': 'Restaurant',
+    name: 'Mocotó',
+    servesCuisine: ['Nordestina', 'Brasileira'],
+    telephone: '(11) 2951-3056',
+    url: SITE_URL,
+    image: SITE_URL + '/og.jpg',
+    address: {
+      '@type': 'PostalAddress',
+      streetAddress: 'Av. Nossa Sra do Loreto, 1100',
+      addressLocality: 'São Paulo',
+      addressRegion: 'SP',
+      addressCountry: 'BR',
+    },
+    sameAs: [
+      'https://www.instagram.com/mocotorestaurante?stkn=ZDF4aGtzbTcwc2Zi',
+      'https://www.facebook.com/share/1c3oUjqcAa/',
+    ],
+  }
+
   // roda a faixa pro lado (um card por clique)
   function rolar(dir) {
     faixa.current.scrollBy({ left: dir * 300, behavior: 'smooth' })
@@ -37,6 +59,7 @@ function Home() {
         <title>{SEO_PADRAO.titulo}</title>
         <meta name="description" content={SEO_PADRAO.descricao} />
         <link rel="canonical" href={SITE_URL + '/'} />
+        <script type="application/ld+json">{JSON.stringify(restaurante)}</script>
       </Head>
       <section className="hero">
         <Sol className="sol-hero" />
