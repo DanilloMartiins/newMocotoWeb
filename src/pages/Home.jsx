@@ -34,7 +34,7 @@ function Home() {
       addressCountry: 'BR',
     },
     sameAs: [
-      'https://www.instagram.com/mocotorestaurante?stkn=ZDF4aGtzbTcwc2Zi',
+      'https://www.instagram.com/mocotorestaurante',
       'https://www.facebook.com/share/1c3oUjqcAa/',
     ],
   }
