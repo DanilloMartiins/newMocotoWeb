@@ -11,11 +11,11 @@ function Mandacaru({ className }) {
 }
 
 function Palma({ className }) {
-  return <img className={className} src="/assets/folha.png" alt="" aria-hidden="true" />
+  return <img className={className} src="/assets/folha.png" alt="" aria-hidden="true" width="680" height="843" />
 }
 
 function Sol({ className }) {
-  return <img className={className} src="/assets/sol.png" alt="" aria-hidden="true" />
+  return <img className={className} src="/assets/sol.png" alt="" aria-hidden="true" width="155" height="81" />
 }
 
 export { Mandacaru, Palma, Sol }

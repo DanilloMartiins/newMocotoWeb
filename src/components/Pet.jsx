@@ -17,8 +17,8 @@ function Pet() {
   return (
     <>
       <button className="pet-selo" onClick={() => setAberto(true)} aria-label="Pet friendly">
-        <img src="/assets/PetSelo.png" alt="" aria-hidden="true" className="pet-icone-desk" />
-        <img src="/assets/pata.png" alt="" aria-hidden="true" className="pet-icone-mob" />
+        <img src="/assets/PetSelo.png" alt="" aria-hidden="true" className="pet-icone-desk" width="150" height="152" />
+        <img src="/assets/pata.png" alt="" aria-hidden="true" className="pet-icone-mob" width="120" height="112" />
         <span>Pet friendly</span>
       </button>
       {aberto && (
@@ -41,7 +41,7 @@ function Pet() {
                   <li>Colchonete para o pet, se preferir.</li>
                   <li>Agrado do chef.</li>
                 </ul>
-                <img src="/assets/dog.png" alt="Cachorro do Mocotó" className="pet-dog" />
+                <img src="/assets/dog.png" alt="Cachorro do Mocotó" className="pet-dog" width="300" height="456" />
               </div>
               <div className="pet-lembre">
                 <h3>Lembre-se</h3>
