@@ -67,7 +67,7 @@ function Home() {
         <div className="hero-texto">
           <p className="chapeu">Bar e restaurante desde a Vila Medeiros</p>
           <h1>Feita com os olhos no mundo, pés no sertão</h1>
-          <p>Comida sertaneja que acolhe todo paladar, do interior pra capital e de volta.</p>
+          <p>Comida nordestina que acolhe todo paladar, do interior pra capital e de volta.</p>
           <div className="hero-botoes">
             <Link to="/reservas" className="btn-cheio">Reservar mesa</Link>
             <Link to="/cardapio" className="btn-vazio">Ver cardápio</Link>
@@ -84,7 +84,7 @@ function Home() {
           <p className="chapeu">O restaurante</p>
           <h2>Do balcão da Vila Medeiros pro mundo</h2>
           <p>
-            O Mocotó nasceu pequeno e virou referência da cozinha sertaneja.
+            O Mocotó nasceu pequeno e virou referência da cozinha nordestina.
             Hoje ocupa a lista dos melhores da América Latina, tem selo Bib Gourmand
             e segue com a mesma base: ingrediente do interior, respeito e panela cheia.
           </p>

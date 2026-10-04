@@ -7,7 +7,7 @@ function Footer() {
       <div className="rodape-dentro">
         <div>
           <h4>Mocotó</h4>
-          <p>Comida sertaneja feita com os olhos no mundo e os pés no sertão.</p>
+          <p>Comida nordestina feita com os olhos no mundo e os pés no sertão.</p>
         </div>
         <div>
           <h4>Visite</h4>
