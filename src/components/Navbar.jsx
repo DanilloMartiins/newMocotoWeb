@@ -23,7 +23,7 @@ function Navbar() {
       <header className="topo">
         <div className="topo-dentro">
           <Link to="/" className="logo">
-            <img src="/assets/mocoto.png" alt="Mocotó" />
+            <img src="/assets/mocoto.png" alt="Mocotó" width="210" height="80" />
           </Link>
           <NavLink to="/budega" className="topo-budega">
             <Icon d="M3 11l9-8 9 8 M5 10v10h14V10 M10 20v-6h4v6" />
@@ -44,7 +44,7 @@ function Navbar() {
       <nav className="tabbar">
         {tabs.map((t) => (
           <NavLink key={t.to} to={t.to} end={t.to === '/'}>
-            {t.logo ? <img src="/assets/mocoto.png" alt="Início" className="tab-logo" /> : <Icon d={t.d} />}
+            {t.logo ? <img src="/assets/mocoto.png" alt="Início" className="tab-logo" width="210" height="80" /> : <Icon d={t.d} />}
             <span>{t.nome}</span>
           </NavLink>
         ))}
