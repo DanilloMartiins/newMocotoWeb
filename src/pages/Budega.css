@@ -70,20 +70,14 @@
 
 @media (max-width: 768px) {
   .grade-budega {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
   }
 
   .secao-budega {
-    padding: 20px;
+    min-width: 0;
+    overflow-wrap: break-word;
   }
 
-  .cacto-budega,
-  .palma-budega {
-    display: none;
-  }
-}
-
-@media (max-width: 480px) {
   .secao-budega .prato-linha {
     flex-wrap: wrap;
     row-gap: 4px;
@@ -101,8 +95,30 @@
   .secao-budega .preco {
     white-space: normal;
     overflow-wrap: anywhere;
-    font-size: clamp(12px, 3.4vw, 14px);
     margin-left: auto;
     text-align: right;
+  }
+
+  .secao-budega {
+    padding: 20px;
+  }
+
+  .cacto-budega,
+  .palma-budega {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .secao-budega .prato-nome strong {
+    font-size: 14px;
+  }
+
+  .secao-budega .prato-nome span {
+    font-size: 12px;
+  }
+
+  .secao-budega .preco {
+    font-size: clamp(12px, 3.4vw, 14px);
   }
 }
