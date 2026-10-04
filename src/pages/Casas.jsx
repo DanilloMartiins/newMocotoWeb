@@ -36,8 +36,8 @@ function Casas() {
     return {
       '@type': 'Restaurant',
       name: 'Mocotó ' + c.nome,
-      url: SITE_URL,
-      image: SITE_URL + '/og.jpg',
+      url: SITE_URL + '/casas',
+      image: SITE_URL + c.foto,
       address: {
         '@type': 'PostalAddress',
         streetAddress: end.split('—')[0].trim(),
