@@ -1,3 +1,5 @@
+import { Head } from 'vite-react-ssg'
+import { SITE_URL, SEO_PADRAO } from '../seo.js'
 import { useRef } from 'react'
 import { Link } from 'react-router-dom'
 import { Mandacaru, Palma, Sol } from '../components/Sertao'
@@ -31,6 +33,11 @@ function Home() {
 
   return (
     <div>
+      <Head>
+        <title>{SEO_PADRAO.titulo}</title>
+        <meta name="description" content={SEO_PADRAO.descricao} />
+        <link rel="canonical" href={SITE_URL + '/'} />
+      </Head>
       <section className="hero">
         <Sol className="sol-hero" />
         <Palma className="palma-hero" />

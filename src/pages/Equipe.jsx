@@ -1,3 +1,5 @@
+import { Head } from 'vite-react-ssg'
+import { SITE_URL } from '../seo.js'
 import { useState } from 'react'
 import Faixa from '../components/Faixa'
 import './Equipe.css'
@@ -105,6 +107,11 @@ function Cartao({ pessoa }) {
 function Equipe() {
   return (
     <>
+      <Head>
+        <title>A equipe | Mocotó</title>
+        <meta name="description" content="Família é a nossa liga: conheça o chef Rodrigo Oliveira e a equipe do Mocotó." />
+        <link rel="canonical" href={SITE_URL + '/equipe'} />
+      </Head>
       <div className="pagina-equipe">
         <p className="chapeu">Nossa gente</p>
         <h1>A equipe</h1>

@@ -1,3 +1,5 @@
+import { Head } from 'vite-react-ssg'
+import { SITE_URL } from '../seo.js'
 import Faixa from '../components/Faixa'
 import './Contato.css'
 
@@ -45,6 +47,11 @@ const casas = [
 function Contato() {
   return (
     <>
+      <Head>
+        <title>Contato | Mocotó</title>
+        <meta name="description" content="Fale com o Mocotó: endereços, telefones, e-mails e redes sociais." />
+        <link rel="canonical" href={SITE_URL + '/contato'} />
+      </Head>
       <div className="pagina-contato">
         <p className="chapeu">Fale com a gente</p>
         <h1>Contato</h1>

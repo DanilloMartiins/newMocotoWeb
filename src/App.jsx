@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import { Outlet } from 'react-router-dom'
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
 import Home from './pages/Home'
@@ -11,27 +11,31 @@ import Contato from './pages/Contato'
 import Pet from './components/Pet'
 import './App.css'
 
-function App() {
+function Layout() {
   return (
-    <Router>
-      <div className="app">
-        <Navbar />
-        <main className="main-content">
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/casas" element={<Casas />} />
-            <Route path="/cardapio" element={<Cardapio />} />
-            <Route path="/equipe" element={<Equipe />} />
-            <Route path="/budega" element={<Budega />} />
-            <Route path="/reservas" element={<Reservas />} />
-            <Route path="/contato" element={<Contato />} />
-          </Routes>
-        </main>
-        <Footer />
-        <Pet />
-      </div>
-    </Router>
+    <div className="app">
+      <Navbar />
+      <main className="main-content">
+        <Outlet />
+      </main>
+      <Footer />
+      <Pet />
+    </div>
   )
 }
 
-export default App
+export const routes = [
+  {
+    path: '/',
+    element: <Layout />,
+    children: [
+      { index: true, element: <Home /> },
+      { path: 'casas', element: <Casas /> },
+      { path: 'cardapio', element: <Cardapio /> },
+      { path: 'equipe', element: <Equipe /> },
+      { path: 'budega', element: <Budega /> },
+      { path: 'reservas', element: <Reservas /> },
+      { path: 'contato', element: <Contato /> },
+    ],
+  },
+]

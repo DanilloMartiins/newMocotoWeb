@@ -1,3 +1,5 @@
+import { Head } from 'vite-react-ssg'
+import { SITE_URL } from '../seo.js'
 import { Link } from 'react-router-dom'
 import Faixa from '../components/Faixa'
 import './Casas.css'
@@ -13,6 +15,11 @@ function Casas() {
 
   return (
     <>
+      <Head>
+        <title>Nossas casas | Mocotó</title>
+        <meta name="description" content="Conheça as casas do Mocotó: Vila Medeiros, Vila Clementino, Vila Leopoldina, Café Pinheiros e Balaio IMS." />
+        <link rel="canonical" href={SITE_URL + '/casas'} />
+      </Head>
       <div className="pagina">
         <p className="chapeu">Onde nos achar</p>
         <h1>Nossas casas</h1>
