@@ -1,3 +1,11 @@
 {
-  "rewrites": [{ "source": "/(.*)", "destination": "/index.html" }]
+  "rewrites": [
+    { "source": "/casas", "destination": "/casas.html" },
+    { "source": "/cardapio", "destination": "/cardapio.html" },
+    { "source": "/equipe", "destination": "/equipe.html" },
+    { "source": "/budega", "destination": "/budega.html" },
+    { "source": "/reservas", "destination": "/reservas.html" },
+    { "source": "/contato", "destination": "/contato.html" },
+    { "source": "/(.*)", "destination": "/index.html" }
+  ]
 }
