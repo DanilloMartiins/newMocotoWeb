@@ -1,22 +1,26 @@
+import React, { Suspense } from 'react'
 import { Outlet } from 'react-router-dom'
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
-import Home from './pages/Home'
-import Casas from './pages/Casas'
-import Cardapio from './pages/Cardapio'
-import Equipe from './pages/Equipe'
-import Budega from './pages/Budega'
-import Reservas from './pages/Reservas'
-import Contato from './pages/Contato'
 import Pet from './components/Pet'
 import './App.css'
+
+const Home = React.lazy(() => import('./pages/Home'))
+const Casas = React.lazy(() => import('./pages/Casas'))
+const Cardapio = React.lazy(() => import('./pages/Cardapio'))
+const Equipe = React.lazy(() => import('./pages/Equipe'))
+const Budega = React.lazy(() => import('./pages/Budega'))
+const Reservas = React.lazy(() => import('./pages/Reservas'))
+const Contato = React.lazy(() => import('./pages/Contato'))
 
 function Layout() {
   return (
     <div className="app">
       <Navbar />
       <main className="main-content">
-        <Outlet />
+        <Suspense fallback={null}>
+          <Outlet />
+        </Suspense>
       </main>
       <Footer />
       <Pet />
@@ -29,13 +33,13 @@ export const routes = [
     path: '/',
     element: <Layout />,
     children: [
-      { index: true, element: <Home /> },
-      { path: 'casas', element: <Casas /> },
-      { path: 'cardapio', element: <Cardapio /> },
-      { path: 'equipe', element: <Equipe /> },
-      { path: 'budega', element: <Budega /> },
-      { path: 'reservas', element: <Reservas /> },
-      { path: 'contato', element: <Contato /> },
+      { index: true, Component: Home },
+      { path: 'casas', Component: Casas },
+      { path: 'cardapio', Component: Cardapio },
+      { path: 'equipe', Component: Equipe },
+      { path: 'budega', Component: Budega },
+      { path: 'reservas', Component: Reservas },
+      { path: 'contato', Component: Contato },
     ],
   },
 ]
