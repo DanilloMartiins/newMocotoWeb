@@ -54,6 +54,8 @@ Desempenho 90, Acessibilidade 95, Práticas 100, SEO 92.
       em produção passar de 2,5 s. Aplicar <link rel="preload" as="image"> apenas
       na home, conferir o nome final do arquivo no dist, e avaliar AVIF.
 
+- [ ] llms.txt (opcional, sem efeito em SEO; evita adicionar o domínio a mais um lugar) e ai-catalog/ard.json (spec em mudança: só considerar se o restaurante pedir)
+
 ## D. Funcionalidades de negócio (proposta, a validar com o restaurante)
 - [ ] Reserva em poucos cliques por unidade (hoje há links externos soltos)
 - [ ] Formulário de orçamento para eventos
