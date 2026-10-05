@@ -117,6 +117,7 @@
   top: 40px;
   right: 5%;
   width: 150px;
+  height: auto;
   z-index: 1;
 }
 
@@ -150,6 +151,7 @@
 
 .sobre img {
   width: 45%;
+  height: auto;
   border-radius: 8px;
 }
 
@@ -274,6 +276,7 @@
 
 .fecho-gaiolas img {
   width: 160px;
+  height: auto;
 }
 
 .fecho-gaiolas a {

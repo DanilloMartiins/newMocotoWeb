@@ -8,17 +8,18 @@
 
 .cacto-budega {
   position: absolute;
-  top: 24px;
-  right: 4%;
-  width: 80px;
+  top: 88px;
+  right: 10px;
+  width: 56px;
   color: var(--verde);
   z-index: 3;
 }
 
 .palma-budega {
   position: absolute;
-  bottom: 0;
-  left: 2%;
+  bottom: 24px;
+  right: 26px;
+  left: auto;
   height: 160px;
   width: auto;
   z-index: 3;
@@ -27,6 +28,7 @@
 .budega-hero .pagina {
   background: rgba(250, 246, 238, 0.94);
   min-height: 100%;
+  padding: 56px 48px 120px;
 }
 
 .intro {
@@ -66,6 +68,30 @@
 
 .secao-budega li:last-child {
   border-bottom: none;
+}
+
+.secao-budega .prato-linha {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+}
+
+.secao-budega .prato-nome {
+  display: flex;
+  flex-direction: column;
+}
+
+.secao-budega .pontilhado {
+  flex: 1;
+  border-bottom: 2px dotted #b3a07c;
+  transform: translateY(-4px);
+}
+
+.secao-budega .preco {
+  font-weight: 700;
+  color: var(--barro-escuro);
+  white-space: nowrap;
+  font-size: 15px;
 }
 
 @media (max-width: 768px) {

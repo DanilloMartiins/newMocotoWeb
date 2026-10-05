@@ -44,7 +44,9 @@
 
 .quadro-chef img {
   width: 280px;
-  flex-shrink: 0;
+  height: 360px;
+  object-fit: cover;
+  object-position: top;
   border: 2px solid var(--marrom);
   filter: sepia(0.25);
 }
@@ -149,6 +151,7 @@
   .quadro-chef img {
     width: 100%;
     max-width: 320px;
+    height: 300px;
   }
 
   .cordel-dentro {
