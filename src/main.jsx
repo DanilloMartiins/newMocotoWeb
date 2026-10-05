@@ -3,3 +3,9 @@ import { routes } from './App.jsx'
 import './index.css'
 
 export const createRoot = ViteReactSSG({ routes })
+
+if (typeof window !== 'undefined' && 'serviceWorker' in navigator) {
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('/sw.js')
+  })
+}
